@@ -1,6 +1,6 @@
 # StreamHub 🎬
 
-A modern, beautiful streaming platform for movies and TV shows built with Next.js, powered by TMDB and Videasy.
+A modern streaming platform for movies and TV shows built with Next.js, powered by TMDB and Videasy.
 
 ![StreamHub Homepage](public/homepage_ss.png)
 
@@ -22,9 +22,9 @@ A modern, beautiful streaming platform for movies and TV shows built with Next.j
 ### 🎬 Streaming Experience
 - Integrated streaming via Videasy player
 - episode navigation for TV shows
-- Beautiful player interface with progress bar
+- Player interface with progress bar
 
-### 🎨 Beautiful Design
+### 🎨 Modern Design
 - Dark theme optimized for viewing
 - Smooth animations with Framer Motion
 - Responsive design for all devices
@@ -43,8 +43,8 @@ A modern, beautiful streaming platform for movies and TV shows built with Next.j
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/local_stream.git
-cd local_stream
+git clone https://github.com/yourusername/StreamHub.git
+cd StreamHub
 
 # Install dependencies
 npm install
