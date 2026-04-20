@@ -43,7 +43,7 @@ A modern streaming platform for movies and TV shows built with Next.js, powered 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/StreamHub.git
+git clone https://github.com/franciscomvargas/StreamHub.git
 cd StreamHub
 
 # Install dependencies
