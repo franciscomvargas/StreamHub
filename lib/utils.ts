@@ -28,6 +28,9 @@ export function getYearFromDate(dateString?: string): number | null {
   return isNaN(year) ? null : year;
 }
 
+const NETFLIX_OVERLAY = true;
+const AUTO_PLAY = false;
+
 export function generateVideasyUrl(
   mediaType: "movie" | "tv" | "anime",
   id: number,
@@ -37,13 +40,13 @@ export function generateVideasyUrl(
 ): string {
   switch (mediaType) {
     case "movie":
-      return `https://player.videasy.net/movie/${id}`;
+      return `https://player.videasy.net/movie/${id}${NETFLIX_OVERLAY && "?overlay=true"}`;
     case "tv":
-      return `https://player.videasy.net/tv/${id}/${season || 1}/${episode || 1}`;
+      return `https://player.videasy.net/tv/${id}/${season || 1}/${episode || 1}${NETFLIX_OVERLAY ? "?overlay=true&nextEpisode=true" : "?nextEpisode=true"}${AUTO_PLAY && "&autoplayNextEpisode=true"}`;
     case "anime":
       // For anime, use seasonId if available, otherwise use the main id
       const targetId = seasonId || id;
-      return `https://player.videasy.net/anime/${targetId}/${episode || 1}`;
+      return `https://player.videasy.net/anime/${targetId}/${episode || 1}${NETFLIX_OVERLAY ? "?overlay=true&nextEpisode=true" : "?nextEpisode=true"}${AUTO_PLAY && "&autoplayNextEpisode=true"}`;
     default:
       return "";
   }
