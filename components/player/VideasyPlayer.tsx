@@ -141,7 +141,7 @@ export function VideasyPlayer({
           ref={iframeRef}
           src={playerUrl}
           className="absolute inset-0 h-full w-full"
-          allow="fullscreen; autoplay; encrypted-media"
+          allow="encrypted-media"
           allowFullScreen
         />
 
